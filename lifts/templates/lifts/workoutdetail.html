@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if workout_details %}
+    <ul>
+    {% for activity in workout_details.lift_events %}
+        <li><a>{{ activity }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No workouts details are available.</p>
+{% endif %}
+</body>
+</html>
